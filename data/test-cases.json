@@ -3,7 +3,7 @@
     {
       "id": "homepage",
       "name": "Homepage",
-      "url": "https://www.pillowtalk.com.au/",
+      "url": "",
       "rules": [
         {
           "id": "isOnMainPage",
@@ -17,7 +17,7 @@
     {
       "id": "product",
       "name": "Product Page",
-      "url": "https://www.pillowtalk.com.au/hotel-home-superior-quilt-hilbhhsqt15/",
+      "url": "",
       "rules": [
         {
           "id": "isOnProductPage",
