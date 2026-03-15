@@ -1,0 +1,60 @@
+{
+  "pageTypes": [
+    {
+      "id": "homepage",
+      "name": "Homepage",
+      "url": "https://www.pillowtalk.com.au/",
+      "rules": [
+        {
+          "id": "isOnMainPage",
+          "name": "Is On Main Page",
+          "jsCode": "Insider.systemRules.isOnMainPage()",
+          "expectedResult": "true",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "name": "Product Page",
+      "url": "https://www.pillowtalk.com.au/hotel-home-superior-quilt-hilbhhsqt15/",
+      "rules": [
+        {
+          "id": "isOnProductPage",
+          "name": "Is On Product Page",
+          "jsCode": "Insider.systemRules.isOnProductPage()",
+          "expectedResult": "true",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "category",
+      "name": "Category Page",
+      "url": "",
+      "rules": [
+        {
+          "id": "isOnCategoryPage",
+          "name": "Is On Category Page",
+          "jsCode": "Insider.systemRules.isOnCategoryPage()",
+          "expectedResult": "true",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "cart",
+      "name": "Cart Page",
+      "url": "",
+      "rules": [
+        {
+          "id": "isOnCartPage",
+          "name": "Is On Cart Page",
+          "jsCode": "Insider.systemRules.isOnCartPage()",
+          "expectedResult": "true",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

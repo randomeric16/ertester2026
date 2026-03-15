@@ -1,0 +1,5 @@
+node_modules
+screenshots/*.png
+.env
+.DS_Store
+credentials.json

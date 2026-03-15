@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>erTester — QA Website Testing</title>
+  <meta name="description" content="erTester: QA testing tool to run Insider rules on websites and validate results">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <div>
+          <h1>erTester</h1>
+          <span class="header-subtitle">Website QA Testing Dashboard</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary" id="btn-run-all" title="Run all enabled tests for all page types">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Run All Tests
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Summary Bar -->
+  <div class="summary-bar" id="summary-bar" style="display: none;">
+    <div class="summary-content">
+      <div class="summary-stat">
+        <span class="stat-label">Total</span>
+        <span class="stat-value" id="stat-total">0</span>
+      </div>
+      <div class="summary-stat stat-pass">
+        <span class="stat-label">Passed</span>
+        <span class="stat-value" id="stat-passed">0</span>
+      </div>
+      <div class="summary-stat stat-fail">
+        <span class="stat-label">Failed</span>
+        <span class="stat-value" id="stat-failed">0</span>
+      </div>
+      <div class="summary-stat">
+        <span class="stat-label">Duration</span>
+        <span class="stat-value" id="stat-duration">-</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Steps Indicator -->
+    <div class="steps-indicator">
+      <div class="step active" id="step-1-indicator">
+        <div class="step-number">1</div>
+        <span>Enter URLs</span>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step" id="step-2-indicator">
+        <div class="step-number">2</div>
+        <span>Select & Run Rules</span>
+      </div>
+      <div class="step-divider"></div>
+      <div class="step" id="step-3-indicator">
+        <div class="step-number">3</div>
+        <span>View Results</span>
+      </div>
+    </div>
+
+    <!-- Page Type Cards -->
+    <div class="page-types-grid" id="page-types-grid">
+      <!-- Dynamically inserted -->
+    </div>
+  </main>
+
+  <!-- Screenshot Modal -->
+  <div class="modal-overlay" id="screenshot-modal" style="display: none;">
+    <div class="modal modal-screenshot">
+      <div class="modal-header">
+        <h2 id="screenshot-modal-title">Screenshot</h2>
+        <button class="modal-close" id="screenshot-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="screenshot-img" src="" alt="Screenshot" class="screenshot-full">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
